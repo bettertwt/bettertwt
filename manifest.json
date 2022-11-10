@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BetterTwT",
+  "author": "Sammwy",
+  "version": "0.0.1",
+  "description": "Enhance Twitter with new features and fixes",
+  "icons": {
+    "16": "images/icon@16.jpg",
+    "32": "images/icon@32.jpg",
+    "48": "images/icon@48.jpg",
+    "128": "images/icon@128.jpg"
+  },
+  "permissions": ["tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "js": ["lib/__injector.js"],
+      "matches": ["https://*.twitter.com/*"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/*.js", "modules/*.js"],
+      "matches": ["https://*.twitter.com/*"]
+    }
+  ]
+}
